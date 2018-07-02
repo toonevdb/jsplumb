@@ -355,7 +355,13 @@ declare module jsPlumb {
         type: string; // "Dot", etc.
     }
 
-    class Endpoint {
+    class jsPlumbUIComponent {
+        getParameter(name: string): any;
+
+        getParameters(): any;
+    }
+
+    class Endpoint extends jsPlumbUIComponent {
         anchor: Anchor;
         connections?: Array<Connection>;
         maxConnections: number;//= 1?
